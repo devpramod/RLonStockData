@@ -5,11 +5,14 @@ from gym.utils import seeding
 class RLEnv(gym.Env):
 
 
-  def __init__(self, data, history_t=90):
-    self.data = data
+  def __init__(self,history_t=90):
+#     self.data = data
     self.history_t = history_t
     self.reset()
     
+  def load_data(self, data):
+    self.data = data
+  
   def step(self, action):
     reward = 0
         
