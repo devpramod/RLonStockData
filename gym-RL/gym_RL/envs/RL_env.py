@@ -7,7 +7,7 @@ class RLEnv(gym.Env):
     metadata = {'render.modes': ['human']}
 
     def __init__(self, df):
-        super(StockTradingEnv, self).__init__()
+        super(RL_env, self).__init__()
         self.df = df
         self.reward_range = (0, MAX_ACCOUNT_BALANCE) 
         
