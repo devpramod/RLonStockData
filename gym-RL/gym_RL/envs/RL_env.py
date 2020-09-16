@@ -100,7 +100,7 @@ class RLEnv(gym.Env):
             self.balance -= additional_cost
             self.cost_basis = (prev_cost + additional_cost) / (self.shares_held + shares_bought)
             self.shares_held += shares_bought
-        elif actionType < 2:
+        elif action_type < 2:
             # Sell amount % of shares held
             shares_sold = self.shares_held * amount 
             self.balance += shares_sold * current_price
