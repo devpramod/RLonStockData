@@ -12,7 +12,7 @@ class RLEnv(gym.Env):
 
     def __init__(self, data, history_t=90):
 #         super(RL_env, self).__init__()
-        self.df = df
+        self.data = data
         self.history_t = history_t
         
         self.reward_range = (-1, 1) 
