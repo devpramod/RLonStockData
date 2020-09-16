@@ -66,4 +66,4 @@ class RLEnv(gym.Env):
         elif reward < 0:
             reward = -1
         
-        return np.asarray([self.position_value] + self.history), np.asarray(reward), self.done # obs, reward, done 
+        return np.asarray([self.position_value] + self.history), np.asarray(reward), self.done,{} # obs, reward, done, info 
