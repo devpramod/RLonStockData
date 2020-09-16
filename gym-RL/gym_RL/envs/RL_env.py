@@ -55,8 +55,6 @@ class RLEnv(gym.Env):
         # set next time
         self.t += 1
         self.position_value = 0
-        print('SELF.POSITIONS', self.positions)
-        print('T', self.t)
         for p in self.positions:
             self.position_value += (self.data.iloc[self.t, :]['Close'] - p)
         self.history.pop(0)
