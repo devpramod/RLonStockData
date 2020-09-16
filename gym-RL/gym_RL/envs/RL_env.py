@@ -25,7 +25,7 @@ class RLEnv(gym.Env):
         self.observation_space = spaces.Box(
         low=0, high=1, shape=(91,), dtype=np.float16)
 
-   def reset(self):
+    def reset(self):
         self.t = 0
         self.done = False
         self.profits = 0
@@ -34,7 +34,7 @@ class RLEnv(gym.Env):
         self.history = [0 for _ in range(self.history_t)]
         return np.array([self.position_value] + self.history) # obs
     
-   def step(self, act):
+    def step(self, act):
         reward = 0
         
         # act = 0: stay, 1: buy, 2: sell
